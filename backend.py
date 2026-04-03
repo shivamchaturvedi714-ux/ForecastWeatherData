@@ -12,8 +12,8 @@ def get_data(place, forecast_days=None, kind=None):
     if kind == "Temperature":
         filtered_data = [dict["main"]["temp"] for dict in filtered_data]
     if kind == "Sky":
-        filtered_data = [dict["weather"][0]["msin"] for dict in filtered_data]
-    return data
+        filtered_data = [dict["weather"][0]["main"] for dict in filtered_data]
+    return filtered_data
 
 
 if __name__ == "__main__":
